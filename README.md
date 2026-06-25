@@ -8,6 +8,8 @@ Este projeto implementa uma pagina web para demonstrar operacoes de CRUD em um a
 
 O ponto principal do trabalho e que os produtos nao sao armazenados no navegador como vetor de objetos. O LocalStorage guarda apenas um vetor de bytes, representado como numeros inteiros. A cada operacao, o sistema le esse vetor, interpreta seus registros, executa a inclusao, alteracao, exclusao ou consulta diretamente sobre os bytes e salva o vetor atualizado.
 
+Video do Sistema [TP04](https://www.youtube.com/watch?v=LWdAuW1Ddwg)
+
 ## Como executar
 
 Abra o arquivo `index.html` no navegador. Nao e necessario servidor, banco de dados ou instalação de dependencias.
