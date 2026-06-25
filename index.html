@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP04 AEDs III - CRUD em Arquivo de Bytes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">AEDs III - TP04</p>
+      <h1>Visualizador de CRUD em arquivo de bytes</h1>
+    </div>
+    <div class="file-stats" aria-live="polite">
+      <span><strong id="stat-total">0</strong> bytes</span>
+      <span><strong id="stat-active">0</strong> ativos</span>
+      <span><strong id="stat-deleted">0</strong> excluidos</span>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="panel form-panel">
+      <div class="section-title">
+        <p class="eyebrow">Produto</p>
+        <h2 id="form-title">Inserir registro</h2>
+      </div>
+
+      <form id="product-form" autocomplete="off">
+        <input type="hidden" id="product-id">
+
+        <label>
+          Nome
+          <input id="name" name="name" type="text" maxlength="80" required placeholder="Ex.: Mouse sem fio">
+        </label>
+
+        <label>
+          Categoria
+          <input id="category" name="category" type="text" maxlength="60" required placeholder="Ex.: Perifericos">
+        </label>
+
+        <div class="field-grid">
+          <label>
+            Preco
+            <input id="price" name="price" type="number" step="0.01" min="0" required placeholder="99.90">
+          </label>
+          <label>
+            Estoque
+            <input id="stock" name="stock" type="number" step="1" min="0" required placeholder="12">
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="primary" id="save-btn">Inserir</button>
+          <button type="button" id="cancel-edit-btn">Cancelar edicao</button>
+          <button type="button" id="seed-btn">Carregar exemplo</button>
+          <button type="button" id="reset-btn" class="danger">Limpar arquivo</button>
+        </div>
+      </form>
+
+      <div class="search-box">
+        <label>
+          Buscar por ID ou nome
+          <input id="search-input" type="search" placeholder="Digite 3, teclado, monitor...">
+        </label>
+      </div>
+      <p class="message" id="message" role="status"></p>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="section-title">
+        <p class="eyebrow">Operacoes</p>
+        <h2>Registros lidos do vetor de bytes</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Produto</th>
+              <th>Categoria</th>
+              <th>Preco</th>
+              <th>Estoque</th>
+              <th>Offset</th>
+              <th>Acoes</th>
+            </tr>
+          </thead>
+          <tbody id="records-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel bytes-panel">
+      <div class="section-title">
+        <p class="eyebrow">Arquivo local</p>
+        <h2>Visualizacao byte a byte</h2>
+      </div>
+
+      <div class="legend" id="legend"></div>
+      <div class="byte-view" id="byte-view" aria-label="Conteudo do arquivo em bytes"></div>
+      <div class="record-details" id="record-details">
+        Selecione um byte para ver o campo, offset e valor correspondente.
+      </div>
+    </section>
+  </main>
+
+  <script src="ByteStream.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
