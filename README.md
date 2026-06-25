@@ -10,7 +10,7 @@ O ponto principal do trabalho e que os produtos nao sao armazenados no navegador
 
 ## Como executar
 
-Abra o arquivo `index.html` no navegador. Nao e necessario servidor, banco de dados ou instal  acao de dependencias.
+Abra o arquivo `index.html` no navegador. Nao e necessario servidor, banco de dados ou instalação de dependencias.
 
 ## Formato do arquivo
 
