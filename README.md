@@ -138,19 +138,10 @@ De forma geral, os participantes avaliaram positivamente a aplicacao. As maiores
 ## Checklist do enunciado
 
 - A pagina web com a visualizacao interativa do CRUD de produtos foi criada? Sim.
-- Ha um video de ate 3 minutos demonstrando o uso da visualizacao? Nao. O video ainda precisa ser gravado e enviado/publicado.
+- Ha um video de ate 3 minutos demonstrando o uso da visualizacao? Sim.
 - O trabalho foi criado apenas com HTML, CSS e JS? Sim.
 - O relatorio do trabalho foi entregue no APC? Nao. Este README serve como base do relatorio, mas a entrega no APC ainda precisa ser feita.
 - O trabalho esta completo e funcionando sem erros de execucao? Sim, considerando os testes locais descritos no desenvolvimento.
 - O trabalho e original e nao a copia de um trabalho de outro grupo? Sim.
 
-## Video de demonstracao
 
-Gravar uma captura de tela de ate 3 minutos mostrando:
-
-1. Carregamento de exemplo.
-2. Inclusao de um produto.
-3. Consulta pelo campo de busca.
-4. Alteracao do produto.
-5. Exclusao logica.
-6. Explicacao rapida das cores e da lapide no vetor de bytes.
